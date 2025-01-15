@@ -196,3 +196,6 @@ def main():
             y_test_sample = y_test.iloc[-args.steps:]
             y_test_sample = scaler.inverse_transform(y_test_sample.values.reshape(-1, 1)).ravel()
             plot_future_forecast(y_test_sample, y_future)
+
+if __name__ == '__main__':
+    main()
